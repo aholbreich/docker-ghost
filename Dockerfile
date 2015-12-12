@@ -3,7 +3,7 @@
 #
 # Ghost version: latest
 #
-FROM ghost:0.7.2
+FROM ghost:latest
 
 MAINTAINER Alexander Holbrecch http//alexander.holbreich.org
 
