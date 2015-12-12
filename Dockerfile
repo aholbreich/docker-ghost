@@ -7,7 +7,7 @@ FROM ghost:0.7.2
 
 MAINTAINER Alexander Holbrecch http//alexander.holbreich.org
 
-# Add in better default config adapted from https://github.com/kitematic/ghost.git
+# Add in better default config 
 ADD config.example.js config.example.js
 
 # Fix ownership in src
