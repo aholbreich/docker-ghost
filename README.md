@@ -16,6 +16,10 @@ it.
 
 //TODO not ready yet
 
+### Ready for compose out of the box
+
+// TODO
+
 ### Utills
 
 //TODO
@@ -23,16 +27,11 @@ it.
 ## Quickstart
 
 ```
-docker run --name some-ghost -d gold/ghost
-```
-
-This will start Ghost in development mode listening on the default port of 2368.
-
-If you'd like to be able to access the instance from the host without the
-contain's IP, standard port mappings can be used:
-
-```
 docker run --name some-ghost -p 8080:2368 -d gold/ghost
+```
+
+This will start Ghost in development mode and whire to the port 80 of the container.
+
 ```
 
 Then, access it via `http://localhost:8080` or `http://host-ip:8080` in a browser.
@@ -79,6 +78,6 @@ a reasonable container would be:
 docker create --name some-ghost -h ghost.example.com --env-file /etc/default/ghost -p 127.0.0.1:2368:2368 --volumes-from some-ghost-content --restart=on-failure:10 gold/ghost npm start --production
 docker run some-ghost
 ```
-## Aknowledge
+## Aknowledges
 
 * [Peter Timofev](https://github.com/ptimof/docker-ghost)
