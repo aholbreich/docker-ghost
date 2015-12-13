@@ -5,7 +5,7 @@
 #
 FROM ghost:latest
 
-MAINTAINER Alexander Holbrecch http//alexander.holbreich.org
+MAINTAINER Alexander Holbreich http//alexander.holbreich.org
 
 # Add in better default config 
 ADD config.example.js config.example.js
