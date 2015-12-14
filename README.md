@@ -12,9 +12,18 @@ The official container for Ghost is fine for running in development mode, but it
 permissions for running in production. That, and the config file doesn't have any easy way to tweak
 it.
 
-### Build in backup
+### Build in backup 
 
-//TODO not ready yet
+```
+docker run --volumes-from some-ghost -v $(pwd)/backups:/backups gold/ghost /backup.sh
+```
+Backups ghost to current directory.
+
+Restore via
+```
+docker run --volumes-from some-ghost -v $(pwd)/backups:/backups gold/ghost /restore.sh <backupfilename>
+```
+Prvide <backupfilename> to replace the context
 
 ### Ready for compose out of the box
 
