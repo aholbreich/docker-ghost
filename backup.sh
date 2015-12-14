@@ -1,5 +1,8 @@
 #!/bin/bash
 #
-# BAckup of ghost
+# Backup of ghost
 #
-tar czvf /backups/ghost_backup_$(date +%F_%H:%M).tar.gz /var/lib/ghost
+filename="ghost_backup_"$(date +%F_%H:%M)".tar.gz"
+echo "backup to $filename"
+tar czvf /backups/$filename /var/lib/ghost
+chown -R user:user /backups/$filename
