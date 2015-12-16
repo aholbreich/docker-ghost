@@ -76,7 +76,7 @@ the Docker command line:
 docker run --name some-ghost --env-file /etc/default/ghost -p 8080:2368 -d gold/ghost
 ```
 
-Hre an examlple fo ENV varibales file:
+Here an example of ENV variables file:
 ```
 # Ghost environment example
 # Place in /etc/default/ghost
@@ -102,7 +102,7 @@ docker run some-ghost
 Backup is working for host based or volume based data (see below)
 
 ```
-docker run --volumes-from some-ghost -v $(pwd)/backups:/backups gold/ghost /backup.sh
+docker run --rm --volumes-from some-ghost -v $(pwd)/backups:/backups gold/ghost /backup.sh
 ```
 Backups ghost to current directory.
 
