@@ -9,9 +9,9 @@ MAINTAINER Alexander Holbreich http//alexander.holbreich.org
 
 # Add in better default config 
 ADD config.example.js config.example.js
-ADD *.sh /
-# Fix permisions for management sripts 
-RUN chmod a+x /backup.sh && chmod a+x /restore.sh
+ADD backup.sh /
+# Fix permisions for backup script
+RUN chmod a+x /backup.sh 
 
 # Fix ownership in src
 RUN chown -R user $GHOST_SOURCE/content

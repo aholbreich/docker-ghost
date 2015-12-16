@@ -79,7 +79,7 @@ docker run --volumes-from some-ghost -v $(pwd)/backups:/backups gold/ghost /back
 Backups ghost to current directory.
 
 ### Restoring Backup
-==Attention!==  Restore script for volume based data keeping is not provied yet. Make sure you know what to do.
+**Attention:**  Restore script for volume based data keeping is not provied yet. Make sure you know what to do.
 
 For the host based solution just extract backupfle content to vlume locaton on host
 
