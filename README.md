@@ -5,34 +5,14 @@ Docker golden image ([gold/ghost](https://hub.docker.com/r/gold/ghost/)) for [Gh
 
 ## Why yet another image for Ghost?
 
-### Prod environment
+
 [Ghost environments](http://support.ghost.org/config/#about-environments) suggest that it's better to use production
 
 The official container for Ghost is fine for running in development mode, but it has the wrong
 permissions for running in production. That, and the config file doesn't have any easy way to tweak
 it.
 
-### Build in backup 
-
-```
-docker run --volumes-from some-ghost -v $(pwd)/backups:/backups gold/ghost /backup.sh
-```
-Backups ghost to current directory.
-
-Restore via
-```
-docker run --volumes-from some-ghost -v $(pwd)/backups:/backups gold/ghost /restore.sh <backupfilename>
-```
-
-Provide <backupfilename> to replace the context
-
-### Ready for compose out of the box
-
-// TODO
-
-### Utills
-
-//TODO
+Also backup and restore solution are backed in. More utill will come in the furure... See below.
 
 
 ## Quickstart
@@ -88,6 +68,25 @@ a reasonable container would be:
 docker create --name some-ghost -h ghost.example.com --env-file /etc/default/ghost -p 127.0.0.1:2368:2368 --volumes-from some-ghost-content --restart=on-failure:10 gold/ghost npm start --production
 docker run some-ghost
 ```
+
+### Backup 
+
+Backup is working for host based or volume based data (see below)
+
+```
+docker run --volumes-from some-ghost -v $(pwd)/backups:/backups gold/ghost /backup.sh
+```
+Backups ghost to current directory.
+
+### Restoring Backup
+==Attention!==  Restore script for volume based data keeping is not provied yet. Make sure you know what to do.
+
+For the host based solution just extract backupfle content to vlume locaton on host
+
+
+### TODO
+
+docker-compose.yaml example
 
 ## Aknowledges
 
