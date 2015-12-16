@@ -21,3 +21,4 @@ VOLUME /backups
 
 # Default environment variables
 ENV GHOST_URL http://localhost
+ENV PROD_FORCE_ADMIN_SSL true

@@ -41,7 +41,7 @@ config = {
     // Configure your URL and mail settings here
     production: {
         url: process.env.GHOST_URL,
-        forceAdminSSL: true,
+        forceAdminSSL: process.env.PROD_FORCE_ADMIN_SSL,
         mail: {
             transport: 'SMTP',
             options: {

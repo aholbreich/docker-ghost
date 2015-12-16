@@ -5,14 +5,15 @@ Docker golden image ([gold/ghost](https://hub.docker.com/r/gold/ghost/)) for [Gh
 
 ## Why yet another image for Ghost?
 
-
 [Ghost environments](http://support.ghost.org/config/#about-environments) suggest that it's better to use production
 
 The official container for Ghost is fine for running in development mode, but it has the wrong
 permissions for running in production. That, and the config file doesn't have any easy way to tweak
-it.
+it (Credit's to [Peter Timofev](https://github.com/ptimof/docker-ghost))
 
-Also backup and restore solution are backed in. More utill will come in the furure... See below.
+Also backup script is backed in.
+Switc from dev to production environment is easy. Beware in default config both modes operate on same database
+`/content/data/ghost.db`
 
 
 ## Quickstart
@@ -23,11 +24,7 @@ docker run --name some-ghost -p 8080:2368 -d gold/ghost
 
 This will start Ghost in development mode and whire to the port 80 of the container.
 
-
 Then, access it via `http://localhost:8080` or `http://host-ip:8080` in a browser.
-
-## Configuration
-
 
 ## Running in production
 
@@ -46,6 +43,8 @@ sudo chown 1000:1000 /var/lib/ghost
 docker run --name some-ghost --env-file /etc/default/ghost -p 80:2368 -v /var/lib/ghost:/var/lib/ghost -d gold/ghost npm start --production
 ```
 
+This is very convinient, because you can tweak your configuration directly in host's `/var/lib/ghost/confg.js`.
+
 ### Content in a data volume
 
 This is the preferred mechanism to store the blog data. Please see the
@@ -58,6 +57,35 @@ docker run --name some-ghost --env-file /etc/default/ghost -p 80:2368 --volumes-
 ```
 
 You should now be able to access this instance as `http://www.example.com` in a browser.
+
+### Configuration via envirenomen variables
+
+Epecially in case you run the content in a volume it's good to have a posibillity to injet some config form outide.
+
+There are environment variables that can be used:
+
+* `GHOST_URL`: the URL of your blog (e.g., `http://www.example.com`)
+* `MAIL_FROM`: the email of the blog installation (e.g., `'"Webmaster" <webmaster@example.com>'`)
+* `MAIL_HOST`: which host to send email to (e.g., `mail.example.com`)
+* `PROD_FORCE_ADMIN_SSL`: Relevant for prodction mode only. Tel's Ghost to force use SSL for admin pages (default: true)
+
+These can either be set on the Docker command line directly, or stored in a file and passed on
+the Docker command line:
+
+```
+docker run --name some-ghost --env-file /etc/default/ghost -p 8080:2368 -d gold/ghost
+```
+
+Hre an examlple fo ENV varibales file:
+```
+# Ghost environment example
+# Place in /etc/default/ghost
+
+GHOST_URL=http://www.example.com
+MAIL_FROM='"Webmaster" <webmaster@example.com>'
+MAIL_HOST=mail.example.com
+PROD_FORCE_ADMIN_SSL=true
+```
 
 ### Behind a reverse proxy
 
@@ -78,16 +106,30 @@ docker run --volumes-from some-ghost -v $(pwd)/backups:/backups gold/ghost /back
 ```
 Backups ghost to current directory.
 
-### Restoring Backup
+#### Restoring Backup
 **Attention:**  Restore script for volume based data keeping is not provied yet. Make sure you know what to do.
 
-For the host based solution just extract backupfle content to vlume locaton on host
+For the host based solution just extract backup file content to volume location on host.
+
+Please contactm if you have good ideas here.
 
 
-### TODO
+### Example docker-comose.yaml
+```
+ghost:
+  image: gold/ghost:latest
+  command: npm start --production
+  restart: always  
+  ports: 
+   - "2368:2368"
+  volumes:
+   - /var/containerdata/ghost/blog/:/var/lib/ghost
+  environment:
+   - GHOST_URL=http://example.com
+   - PROD_FORCE_ADMIN_SSL=true
+   - MAIL_FROM='"Webmaster" <webmaster@example.com>'
+   - MAIL_HOST=mail.example.com
 
-docker-compose.yaml example
+```
+Even if env varibales are provided, config.js can b still found and tweaked in /var/containerdata/ghost/blog/ on the host.
 
-## Aknowledges
-
-* [Peter Timofev](https://github.com/ptimof/docker-ghost)
