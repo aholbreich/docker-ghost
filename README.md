@@ -2,6 +2,10 @@
 
 Docker golden image ([gold/ghost](https://hub.docker.com/r/gold/ghost/)) for [Ghost](https://github.com/TryGhost/Ghost).
 
+Most relevant tags
+* latest
+* 0.7.3
+* 0.7.2_b1
 
 ## Why yet another image for Ghost?
 
@@ -132,4 +136,10 @@ ghost:
 
 ```
 Even if env varibales are provided, config.js can b still found and tweaked in /var/containerdata/ghost/blog/ on the host.
+
+### More information
+
+* [Docker image for Ghost blog](http://alexander.holbreich.org/docker-ghost-image/)
+* [Home of the project on Gihub](https://hub.docker.com/r/gold/ghost/)
+
 
