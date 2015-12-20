@@ -13,7 +13,7 @@ Most relevant tags
 
 The official container for Ghost is fine for running in development mode, but it has the wrong
 permissions for running in production. That, and the config file doesn't have any easy way to tweak
-it (Credit's to [Peter Timofev](https://github.com/ptimof/docker-ghost))
+it (Credits to [Peter Timofev](https://github.com/ptimof/docker-ghost))
 
 Also backup script is backed in.
 Switc from dev to production environment is easy. Beware in default config both modes operate on same database
