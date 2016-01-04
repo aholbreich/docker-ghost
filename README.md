@@ -4,8 +4,10 @@ Docker golden image ([gold/ghost](https://hub.docker.com/r/gold/ghost/)) for [Gh
 
 Most relevant tags
 * latest
+* 0.7.4
 * 0.7.3
 * 0.7.2_b1
+
 
 ## Why yet another image for Ghost?
 
