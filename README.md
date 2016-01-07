@@ -64,7 +64,7 @@ docker run --name some-ghost --env-file /etc/default/ghost -p 80:2368 --volumes-
 
 You should now be able to access this instance as `http://www.example.com` in a browser.
 
-### Configuration via envirenomen variables
+### Configuration via environment variables
 
 Epecially in case you run the content in a volume it's good to have a posibillity to injet some config form outide.
 
@@ -142,6 +142,6 @@ Even if env varibales are provided, config.js can b still found and tweaked in /
 ### More information
 
 * [Docker image for Ghost blog](http://alexander.holbreich.org/docker-ghost-image/)
-* [Home of the project on Gihub](https://hub.docker.com/r/gold/ghost/)
+* [Home of the project on Gihub](https://github.com/aholbreich/docker-ghost)
 
 
