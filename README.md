@@ -4,6 +4,7 @@ Docker golden image ([gold/ghost](https://hub.docker.com/r/gold/ghost/)) for [Gh
 
 Most relevant tags
 * latest
+* 0.7.5
 * 0.7.4
 * 0.7.3
 * 0.7.2_b1
@@ -123,7 +124,7 @@ Please contactm if you have good ideas here.
 ### Example docker-comose.yaml
 ```
 ghost:
-  image: gold/ghost:latest
+  image: gold/ghost:0.7.5
   command: npm start --production
   restart: always  
   ports: 
