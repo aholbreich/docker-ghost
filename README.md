@@ -4,6 +4,7 @@ Docker golden image ([gold/ghost](https://hub.docker.com/r/gold/ghost/)) for [Gh
 
 Most relevant tags
 * latest
+* 0.7.8
 * 0.7.6
 * 0.7.5
 * 0.7.4
@@ -125,7 +126,7 @@ Please contactm if you have good ideas here.
 ### Example docker-comose.yaml
 ```
 ghost:
-  image: gold/ghost:0.7.5
+  image: gold/ghost:0.7.8
   command: npm start --production
   restart: always  
   ports: 
@@ -145,5 +146,4 @@ Even if env varibales are provided, config.js can b still found and tweaked in /
 
 * [Docker image for Ghost blog](http://alexander.holbreich.org/docker-ghost-image/)
 * [Home of the project on Gihub](https://github.com/aholbreich/docker-ghost)
-
 
