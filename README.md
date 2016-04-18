@@ -126,7 +126,7 @@ Please contactm if you have good ideas here.
 ### Example docker-comose.yaml
 ```
 ghost:
-  image: gold/ghost:0.7.8
+  image: gold/ghost:0.7.9
   command: npm start --production
   restart: always  
   ports: 

@@ -1,13 +1,13 @@
 # Ghost Docker image.
 # Ghost is a simple, powerful publishing platform.
 #
-# Ghost version: 0.7.8
+# Ghost version: 0.7.9
 #
-FROM ghost:0.7.8
+FROM ghost:0.7.9
 
 MAINTAINER Alexander Holbreich http//alexander.holbreich.org
 
-# Add in better default config 
+# Add better default config 
 ADD config.example.js config.example.js
 ADD backup.sh /
 # Fix permisions for backup script
