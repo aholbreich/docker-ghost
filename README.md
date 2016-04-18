@@ -6,11 +6,13 @@ Docker golden image ([gold/ghost](https://hub.docker.com/r/gold/ghost/)) for [Gh
 Most relevant tags
 * 0.7.9 (latest) [![](https://badge.imagelayers.io/gold/ghost:latest.svg)](https://imagelayers.io/?images=gold/ghost:latest 'latest')
 * 0.7.8 [![](https://badge.imagelayers.io/gold/ghost:0.7.8.svg)](https://imagelayers.io/?images=gold/ghost:0.7.8 '0.7.8')
-* 0.7.6
+* 0.7.6 [![](https://badge.imagelayers.io/gold/ghost:0.7.6.svg)](https://imagelayers.io/?images=gold/ghost:0.7.6 '0.7.6')
 * 0.7.5
 * 0.7.4
 * 0.7.3
-* 0.7.2
+
+#### Experimental branch 
+* alpine - not recomendet for production now. 
 
 
 ## Why yet another image for Ghost?

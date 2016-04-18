@@ -3,7 +3,7 @@
 #
 # Ghost version: 0.7.9
 #
-FROM ghost:latest
+FROM ghost:0.7.9
 
 MAINTAINER Alexander Holbreich http//alexander.holbreich.org
 
@@ -20,5 +20,4 @@ RUN chown -R user $GHOST_SOURCE/content
 VOLUME /backups
 
 # Default environment variables
-ENV GHOST_URL http://localhost
-ENV PROD_FORCE_ADMIN_SSL true
+ENV GHOST_URL=http://localhost PROD_FORCE_ADMIN_SSL=true
