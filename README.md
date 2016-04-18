@@ -11,6 +11,10 @@ Most relevant tags
 * 0.7.3
 * 0.7.2
 
+Branches
+* apline   [![](https://badge.imagelayers.io/gold/ghost:alpine.svg)](https://imagelayers.io/?images=gold/ghost:alpine 'alpine')
+
+==Attention: Alpine version is still experimenthal. Use in production on your own risk==
 
 ## Why yet another image for Ghost?
 
@@ -28,7 +32,7 @@ Switc from dev to production environment is easy. Beware in default config both 
 ## Quickstart
 
 ```
-docker run --name some-ghost -p 8080:2368 -d gold/ghost
+docker run --name some-ghost -p 8080:2368 -d gold/ghost:alpine
 ```
 
 This will start Ghost in development mode and whire to the port 80 of the container.
@@ -126,7 +130,7 @@ Please contactm if you have good ideas here.
 ### Example docker-comose.yaml
 ```
 ghost:
-  image: gold/ghost:0.7.9
+  image: gold/ghost:alpine
   command: npm start --production
   restart: always  
   ports: 
