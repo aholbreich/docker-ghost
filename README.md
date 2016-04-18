@@ -1,10 +1,11 @@
 # docker-ghost
 
+
 Docker golden image ([gold/ghost](https://hub.docker.com/r/gold/ghost/)) for [Ghost](https://github.com/TryGhost/Ghost).
 
 Most relevant tags
-* 0.7.9 (latest)
-* 0.7.8
+* 0.7.9 (latest) [![](https://badge.imagelayers.io/gold/ghost:latest.svg)](https://imagelayers.io/?images=gold/ghost:latest 'latest')
+* 0.7.8 [![](https://badge.imagelayers.io/gold/ghost:0.7.8.svg)](https://imagelayers.io/?images=gold/ghost:0.7.8 '0.7.8')
 * 0.7.6
 * 0.7.5
 * 0.7.4
@@ -146,4 +147,3 @@ Even if env varibales are provided, config.js can b still found and tweaked in /
 
 * [Docker image for Ghost blog](http://alexander.holbreich.org/docker-ghost-image/)
 * [Home of the project on Gihub](https://github.com/aholbreich/docker-ghost)
-
