@@ -60,7 +60,7 @@ config = {
             connection: {
                 filename: path.join(__dirname, '/content/data/ghost.db')
             },
-            debug: false^
+            debug: false
         },
         server: {
             // Host to be passed to node's `net.Server#listen()`
