@@ -80,6 +80,10 @@ There are environment variables that can be used:
 * `MAIL_FROM`: the email of the blog installation (e.g., `'"Webmaster" <webmaster@example.com>'`)
 * `MAIL_HOST`: which host to send email to (e.g., `mail.example.com`)
 * `PROD_FORCE_ADMIN_SSL`: Relevant for prodction mode only. Tel's Ghost to force use SSL for admin pages (default: true)
+* `MAIL_PORT`: sets a port for secure mail connection
+* `MAIL_SSL` : set "true" or "false"
+* `MAIL_USERNAME` : The username for the mail server
+* `MAIL_PASSWORD` : The password for the username above
 
 These can either be set on the Docker command line directly, or stored in a file and passed on
 the Docker command line:
@@ -97,6 +101,10 @@ GHOST_URL=http://www.example.com
 MAIL_FROM='"Webmaster" <webmaster@example.com>'
 MAIL_HOST=mail.example.com
 PROD_FORCE_ADMIN_SSL=true
+MAIL_SSL=true
+MAIL_PORT=465
+MAIL_USERNAME=ghost@example.com
+MAIL_PASSWORD=hopefullyasecurepassword
 ```
 
 ### Behind a reverse proxy
@@ -141,6 +149,10 @@ ghost:
    - PROD_FORCE_ADMIN_SSL=true
    - MAIL_FROM='"Webmaster" <webmaster@example.com>'
    - MAIL_HOST=mail.example.com
+   - MAIL_SSL=true
+   - MAIL_PORT=465
+   - MAIL_USERNAME=ghost@example.com
+   - MAIL_PASSWORD=hopefullyasecurepassword
 
 ```
 Even if env varibales are provided, config.js can b still found and tweaked in /var/containerdata/ghost/blog/ on the host.

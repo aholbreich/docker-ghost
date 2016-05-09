@@ -45,7 +45,13 @@ config = {
         mail: {
             transport: 'SMTP',
             options: {
-                host: process.env.MAIL_HOST
+                host: process.env.MAIL_HOST,
+                secureConnection: process.env.MAIL_SSL,
+                port: process.env.MAIL_PORT,
+                auth: {
+                    user: process.env.MAIL_USERNAME,
+                    pass: process.env.MAIL_PASSWORD,
+                },
             },
             from: process.env.MAIL_FROM
         },
