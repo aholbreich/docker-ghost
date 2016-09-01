@@ -13,7 +13,7 @@ Most relevant tags
 * 0.7.3
 
 #### Experimental branch 
-* alpine [![](https://badge.imagelayers.io/gold/ghost:alpine.svg)](https://imagelayers.io/?images=gold/ghost:alpine 'alpine') - not recomendet for production now. 
+* alpine - not recomendet for production now. 
 
 
 ## Why yet another image for Ghost?
