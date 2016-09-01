@@ -12,8 +12,6 @@ Most relevant tags
 * 0.7.4
 * 0.7.3
 
-* alpine (experimental)
-
 #### Experimental branch 
 * alpine [![](https://badge.imagelayers.io/gold/ghost:alpine.svg)](https://imagelayers.io/?images=gold/ghost:alpine 'alpine') - not recomendet for production now. 
 
