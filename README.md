@@ -5,6 +5,8 @@ Docker golden image ([gold/ghost](https://hub.docker.com/r/gold/ghost/)) for [Gh
 
 Most relevant tags
 * 0.10.0
+* 0.9.0
+* 0.8.0
 * 0.7.9 
 * 0.7.8 
 * 0.7.6 

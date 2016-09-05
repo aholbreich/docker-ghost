@@ -1,7 +1,7 @@
 # Ghost Docker image.
 # Ghost is a simple, powerful publishing platform.
 #
-# Ghost version: 0.8.0
+# Ghost version: 0.9.0
 #
 FROM ghost:latest
 
