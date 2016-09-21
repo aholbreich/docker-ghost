@@ -1,7 +1,7 @@
 # Ghost Docker image.
 # Ghost is a simple, powerful publishing platform.
 #
-# Ghost version: 0.7.9
+# Ghost version: 0.8.0
 # 
 # ATTENTION: This branch has experimental sttus now. use on your own risk.
 #
@@ -10,7 +10,7 @@ MAINTAINER Alexander Holbreich http//alexander.holbreich.org
 
 #Versions
 ENV GOSU_VERSION=1.7 \
-    GHOST_VERSION=0.7.9 \
+    GHOST_VERSION=0.8.0 \
     GHOST_SOURCE=/usr/src/ghost
 
 #1. Install GOSU (Docker optimized sudo tool)
