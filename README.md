@@ -25,7 +25,6 @@ Also backup script is backed in.
 Switc from dev to production environment is easy. Beware in default config both modes operate on same database
 `/content/data/ghost.db`
 
-
 ## Quickstart
 
 ```
@@ -128,9 +127,7 @@ Backups ghost to current directory.
 **Attention:**  Restore script for volume based data keeping is not provied yet. Make sure you know what to do.
 
 For the host based solution just extract backup file content to volume location on host.
-
-Please contactm if you have good ideas here.
-
+Please contact me if you have good ideas how to improve things here.
 
 ### Example docker-comose.yaml
 ```
