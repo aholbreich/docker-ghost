@@ -4,7 +4,7 @@
 Docker golden image ([gold/ghost](https://hub.docker.com/r/gold/ghost/)) for [Ghost](https://github.com/TryGhost/Ghost).
 
 Most relevant tags
-* 0.11.0
+* 0.11.1
 * 0.10.1
 * 0.9.0
 * 0.8.0
@@ -17,7 +17,6 @@ Most relevant tags
 
 #### Experimental branch 
 * alpine - not recomendet for production now. 
-
 
 ## Why yet another image for Ghost?
 
