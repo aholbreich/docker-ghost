@@ -1,9 +1,8 @@
 # Ghost Docker image.
-# Ghost is a simple, powerful publishing platform.
 #
-# Ghost version: 0.11.1
+# Ghost version: 0.11.2
 #
-FROM ghost:0.11.1
+FROM ghost:0.11.2
 
 MAINTAINER Alexander Holbreich http//alexander.holbreich.org
 
