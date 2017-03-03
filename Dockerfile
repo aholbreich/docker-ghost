@@ -1,8 +1,8 @@
 # Ghost Docker image.
 #
-# Ghost version: 0.11.5
+# Ghost version: 0.11.7
 #
-FROM ghost:0.11.5
+FROM ghost:0.11.7
 
 MAINTAINER Alexander Holbreich http//alexander.holbreich.org
 
