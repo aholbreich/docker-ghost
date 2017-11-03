@@ -1,7 +1,7 @@
 # Ghost Docker image.
 #
 #
-FROM ghost:0.11.12
+FROM ghost:0.11
 
 MAINTAINER Alexander Holbreich http//alexander.holbreich.org
 

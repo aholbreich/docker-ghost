@@ -4,6 +4,8 @@
 Docker golden image ([gold/ghost](https://hub.docker.com/r/gold/ghost/)) for [Ghost](https://github.com/TryGhost/Ghost).
 
 Most interesting version tags
+* 0.11 - latest of 0.11
+
 * 0.11.12
 * 0.11.8
 * 0.11.7
