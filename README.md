@@ -4,10 +4,9 @@
 Docker golden image ([gold/ghost](https://hub.docker.com/r/gold/ghost/)) for [Ghost](https://github.com/TryGhost/Ghost).
 
 Most interesting version tags
+* 0.11.9
 * 0.11.8
 * 0.11.7
-* 0.11.5
-* 0.10.1
 
 #### Experimental branch 
 * alpine - not recomendet for production now. 
@@ -17,8 +16,7 @@ Most interesting version tags
 [Ghost environments](http://support.ghost.org/config/#about-environments) suggest that it's better to use production
 
 The official container for Ghost is fine for running in development mode, but it has the wrong
-permissions for running in production. That, and the config file doesn't have any easy way to tweak
-it (Credits to [Peter Timofev](https://github.com/ptimof/docker-ghost))
+permissions for running in production. 
 
 Also backup script is backed in.
 Switc from dev to production environment is easy. Beware in default config both modes operate on same database
